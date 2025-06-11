@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,7 +9,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background overflow-hidden">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-24 px-4 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-12 sm:py-16 md:py-24 px-4 overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full animate-pulse"></div>
@@ -17,63 +18,63 @@ const Index = () => {
         
         <div className="container mx-auto max-w-7xl text-center relative z-10">
           <div className="animate-fade-in">
-            <Badge className="mb-8 bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600 px-6 py-3 text-lg font-bold shadow-xl animate-scale-in rounded-full">
+            <Badge className="mb-6 sm:mb-8 bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-lg font-bold shadow-xl animate-scale-in rounded-full">
               🔥 86% OFF - LIMITED TIME ONLY
             </Badge>
             
-            <h1 className="text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-10 leading-tight tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6 sm:mb-8 md:mb-10 leading-tight tracking-tight px-2">
               Master Project Management
             </h1>
             
-            <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-8">
+            <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 mb-6 sm:mb-8 px-2">
               Get 5 Top Courses for Only $94
             </div>
             
-            <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-5xl mx-auto leading-relaxed font-medium">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-12 max-w-5xl mx-auto leading-relaxed font-medium px-4">
               Transform your career with expert-led training for PMP®, PMI-SP®, PRINCE2®, CBAP®, PMI-RMP® exams. 
-              <br />
+              <br className="hidden sm:block" />
               <span className="text-blue-600 font-bold">Lifetime access • Risk-free • Career-boosting</span>
             </p>
             
-            <div className="flex flex-col lg:flex-row gap-8 justify-center items-center mb-16">
-              <Button size="lg" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-12 py-8 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 animate-scale-in rounded-2xl group">
-                <Play className="mr-3 w-6 h-6 group-hover:scale-110 transition-transform" />
-                Get Instant Access for $94
-                <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            <div className="flex flex-col gap-6 sm:gap-8 lg:flex-row justify-center items-center mb-12 sm:mb-16 px-4">
+              <Button size="lg" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 sm:px-12 py-6 sm:py-8 text-lg sm:text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 animate-scale-in rounded-2xl group w-full sm:w-auto">
+                <Play className="mr-2 sm:mr-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
+                <span className="text-center">Get Instant Access for $94</span>
+                <ArrowRight className="ml-2 sm:ml-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
               
-              <div className="text-center animate-fade-in delay-300 bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl">
-                <p className="text-xl text-gray-500 line-through mb-2">Regular Price: $928</p>
-                <p className="text-3xl font-bold text-green-600 mb-2">You Save: $834</p>
+              <div className="text-center animate-fade-in delay-300 bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-xl w-full sm:w-auto">
+                <p className="text-lg sm:text-xl text-gray-500 line-through mb-2">Regular Price: $928</p>
+                <p className="text-2xl sm:text-3xl font-bold text-green-600 mb-2">You Save: $834</p>
                 <p className="text-sm text-gray-600 font-medium">One-time payment • No subscription</p>
               </div>
             </div>
 
             {/* Enhanced trust indicators */}
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto animate-fade-in delay-500">
-              <div className="flex items-center justify-center gap-3 bg-white/90 backdrop-blur-md rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <div className="flex text-yellow-400 text-xl">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto animate-fade-in delay-500 px-4">
+              <div className="flex items-center justify-center gap-3 bg-white/90 backdrop-blur-md rounded-2xl px-4 sm:px-8 py-4 sm:py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <div className="flex text-yellow-400 text-lg sm:text-xl">
                   {'★'.repeat(5)}
                 </div>
                 <div className="text-left">
-                  <div className="text-lg font-bold">4.8/5 Rating</div>
-                  <div className="text-sm text-gray-600">Based on 1,200+ reviews</div>
+                  <div className="text-base sm:text-lg font-bold">4.8/5 Rating</div>
+                  <div className="text-xs sm:text-sm text-gray-600">Based on 1,200+ reviews</div>
                 </div>
               </div>
               
-              <div className="flex items-center justify-center gap-3 bg-white/90 backdrop-blur-md rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <Users className="w-8 h-8 text-blue-600" />
+              <div className="flex items-center justify-center gap-3 bg-white/90 backdrop-blur-md rounded-2xl px-4 sm:px-8 py-4 sm:py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <Users className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" />
                 <div className="text-left">
-                  <div className="text-lg font-bold">3,786+ Students</div>
-                  <div className="text-sm text-gray-600">Successfully certified</div>
+                  <div className="text-base sm:text-lg font-bold">3,786+ Students</div>
+                  <div className="text-xs sm:text-sm text-gray-600">Successfully certified</div>
                 </div>
               </div>
               
-              <div className="flex items-center justify-center gap-3 bg-white/90 backdrop-blur-md rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <Shield className="w-8 h-8 text-green-600" />
+              <div className="flex items-center justify-center gap-3 bg-white/90 backdrop-blur-md rounded-2xl px-4 sm:px-8 py-4 sm:py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-green-600" />
                 <div className="text-left">
-                  <div className="text-lg font-bold">7-Day Guarantee</div>
-                  <div className="text-sm text-gray-600">100% money back</div>
+                  <div className="text-base sm:text-lg font-bold">7-Day Guarantee</div>
+                  <div className="text-xs sm:text-sm text-gray-600">100% money back</div>
                 </div>
               </div>
             </div>
@@ -82,10 +83,10 @@ const Index = () => {
       </section>
 
       {/* Social Proof Section */}
-      <section className="py-16 px-4 bg-white relative">
+      <section className="py-12 sm:py-16 px-4 bg-white relative">
         <div className="container mx-auto max-w-6xl text-center">
-          <h2 className="text-3xl font-bold mb-12 animate-fade-in">What Our Students Say</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 animate-fade-in">What Our Students Say</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
                 text: "Excellent training content. Helped me pass my PMP exam on the first try! The practice tests were incredibly helpful.",
@@ -104,12 +105,12 @@ const Index = () => {
               }
             ].map((testimonial, index) => (
               <Card key={index} className="text-left hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in bg-gradient-to-br from-white to-gray-50 border-0 shadow-lg" style={{ animationDelay: `${index * 200}ms` }}>
-                <CardContent className="p-8">
-                  <div className="flex text-yellow-400 mb-4 text-lg">{'★'.repeat(5)}</div>
-                  <p className="text-gray-700 mb-6 text-lg leading-relaxed">"{testimonial.text}"</p>
+                <CardContent className="p-6 sm:p-8">
+                  <div className="flex text-yellow-400 mb-4 text-base sm:text-lg">{'★'.repeat(5)}</div>
+                  <p className="text-gray-700 mb-4 sm:mb-6 text-base sm:text-lg leading-relaxed">"{testimonial.text}"</p>
                   <div>
-                    <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                    <p className="text-sm text-blue-600 font-medium">{testimonial.company}</p>
+                    <p className="font-semibold text-gray-900 text-sm sm:text-base">{testimonial.author}</p>
+                    <p className="text-xs sm:text-sm text-blue-600 font-medium">{testimonial.company}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -119,19 +120,19 @@ const Index = () => {
       </section>
 
       {/* What's Included Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50 relative">
+      <section className="py-16 sm:py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50 relative">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16 animate-fade-in">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
             <Badge className="mb-4 bg-blue-100 text-blue-800 px-4 py-2">Complete Training Bundle</Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
               5 Industry-Leading Certifications
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Everything you need to become a certified project management professional
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-8 sm:mt-12">
             {[
               {
                 title: "PMP® Certification Training",
@@ -181,24 +182,24 @@ const Index = () => {
               <Card key={index} className={`relative overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 animate-fade-in group ${course.bonus ? 'bg-gradient-to-br from-pink-50 to-purple-50 border-2 border-pink-200' : 'bg-white'}`} style={{ animationDelay: `${index * 150}ms` }}>
                 {course.popular && (
                   <div className="absolute -top-2 -right-2 z-10">
-                    <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 text-xs font-bold shadow-lg">
+                    <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-2 sm:px-3 py-1 text-xs font-bold shadow-lg">
                       MOST POPULAR
                     </Badge>
                   </div>
                 )}
                 <CardHeader className="pb-4">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${course.color} p-4 mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <course.icon className="w-8 h-8 text-white" />
+                  <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br ${course.color} p-3 sm:p-4 mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <course.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
-                  <CardTitle className="text-xl font-bold">{course.title}</CardTitle>
-                  <CardDescription className="text-lg font-medium text-gray-600">{course.description}</CardDescription>
+                  <CardTitle className="text-lg sm:text-xl font-bold">{course.title}</CardTitle>
+                  <CardDescription className="text-base sm:text-lg font-medium text-gray-600">{course.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2 sm:space-y-3">
                     {course.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-3">
-                        <Check className={`w-5 h-5 ${course.bonus ? 'text-pink-600' : 'text-green-500'}`} />
-                        <span className="text-sm font-medium">{feature}</span>
+                      <li key={featureIndex} className="flex items-center gap-2 sm:gap-3">
+                        <Check className={`w-4 h-4 sm:w-5 sm:h-5 ${course.bonus ? 'text-pink-600' : 'text-green-500'}`} />
+                        <span className="text-xs sm:text-sm font-medium">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -207,26 +208,26 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-16 animate-fade-in">
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-12 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+          <div className="text-center mt-12 sm:mt-16 animate-fade-in">
+            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
               Start Your Journey Today
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
             </Button>
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-16 sm:py-20 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl font-bold mb-6">Why Choose Our Bundle?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Why Choose Our Bundle?</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Everything you need to succeed in project management
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
                 icon: Clock,
@@ -265,12 +266,12 @@ const Index = () => {
                 color: "bg-yellow-100 text-yellow-600"
               }
             ].map((benefit, index) => (
-              <div key={index} className="text-center group hover:scale-105 transition-all duration-300 animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
-                <div className={`w-20 h-20 ${benefit.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                  <benefit.icon className="w-10 h-10" />
+              <div key={index} className="text-center group hover:scale-105 transition-all duration-300 animate-fade-in px-4" style={{ animationDelay: `${index * 100}ms` }}>
+                <div className={`w-16 h-16 sm:w-20 sm:h-20 ${benefit.color} rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <benefit.icon className="w-8 h-8 sm:w-10 sm:h-10" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">{benefit.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -278,16 +279,16 @@ const Index = () => {
       </section>
 
       {/* Who Is This For Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-indigo-50">
+      <section className="py-16 sm:py-20 px-4 bg-gradient-to-br from-gray-50 to-indigo-50">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl font-bold mb-6">Perfect For</h2>
-            <p className="text-xl text-gray-600">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Perfect For</h2>
+            <p className="text-lg sm:text-xl text-gray-600 px-4">
               Whether you're starting out or advancing your career
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {[
               "Project managers & team leaders",
               "Aspiring project managers", 
@@ -297,18 +298,18 @@ const Index = () => {
               "Corporate teams & L&D managers"
             ].map((audience, index) => (
               <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in bg-white border-0 shadow-lg" style={{ animationDelay: `${index * 100}ms` }}>
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Check className="w-8 h-8 text-white" />
+                <CardContent className="p-6 sm:p-8">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                    <Check className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
-                  <p className="text-lg font-semibold text-gray-800">{audience}</p>
+                  <p className="text-base sm:text-lg font-semibold text-gray-800">{audience}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
           
-          <div className="text-center mt-12 animate-fade-in">
-            <Badge variant="outline" className="text-lg px-6 py-3 bg-white border-2 border-green-200 text-green-700 font-semibold">
+          <div className="text-center mt-8 sm:mt-12 animate-fade-in">
+            <Badge variant="outline" className="text-base sm:text-lg px-4 sm:px-6 py-2 sm:py-3 bg-white border-2 border-green-200 text-green-700 font-semibold">
               ✅ No prior certification required — all levels welcome!
             </Badge>
           </div>
@@ -316,22 +317,22 @@ const Index = () => {
       </section>
 
       {/* How It Works Section - Modernized */}
-      <section className="py-24 px-4 bg-white relative overflow-hidden">
+      <section className="py-20 sm:py-24 px-4 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50"></div>
         <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="text-center mb-20 animate-fade-in">
-            <Badge className="mb-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 text-lg font-semibold rounded-full shadow-lg">
+          <div className="text-center mb-16 sm:mb-20 animate-fade-in">
+            <Badge className="mb-4 sm:mb-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 sm:px-6 py-2 sm:py-3 text-base sm:text-lg font-semibold rounded-full shadow-lg">
               Simple Process
             </Badge>
-            <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6 sm:mb-8 bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent px-4">
               How It Works
             </h2>
-            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto px-4">
               Get started in minutes and become certified in months
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {[
               { 
                 step: "01", 
@@ -379,24 +380,24 @@ const Index = () => {
               <Card key={index} className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 animate-fade-in bg-white border-0 shadow-xl" style={{ animationDelay: `${index * 150}ms` }}>
                 <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
                 
-                <CardContent className="p-8 relative z-10">
-                  <div className="flex items-center justify-between mb-6">
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <item.icon className="w-8 h-8 text-white" />
+                <CardContent className="p-6 sm:p-8 relative z-10">
+                  <div className="flex items-center justify-between mb-4 sm:mb-6">
+                    <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <item.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
-                    <div className={`text-6xl font-black bg-gradient-to-br ${item.color} bg-clip-text text-transparent opacity-20 group-hover:opacity-40 transition-opacity duration-300`}>
+                    <div className={`text-4xl sm:text-6xl font-black bg-gradient-to-br ${item.color} bg-clip-text text-transparent opacity-20 group-hover:opacity-40 transition-opacity duration-300`}>
                       {item.step}
                     </div>
                   </div>
                   
-                  <h3 className="text-2xl font-bold mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 group-hover:text-blue-600 transition-colors duration-300">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 text-lg leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                  <p className="text-gray-600 text-base sm:text-lg leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                     {item.description}
                   </p>
                   
-                  <div className="mt-6 flex items-center text-blue-600 font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                  <div className="mt-4 sm:mt-6 flex items-center text-blue-600 font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                     Learn more
                     <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
@@ -405,17 +406,17 @@ const Index = () => {
             ))}
           </div>
           
-          <div className="text-center mt-16 animate-fade-in">
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 rounded-2xl">
+          <div className="text-center mt-12 sm:mt-16 animate-fade-in">
+            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 rounded-2xl w-full sm:w-auto">
               Start Your Success Journey
-              <ArrowRight className="ml-3 w-6 h-6" />
+              <ArrowRight className="ml-2 sm:ml-3 w-5 h-5 sm:w-6 sm:h-6" />
             </Button>
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white relative overflow-hidden">
+      <section className="py-16 sm:py-20 px-4 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white relative overflow-hidden">
         {/* Animated background */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -424,17 +425,17 @@ const Index = () => {
 
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <div className="animate-fade-in">
-            <Badge className="mb-6 bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-3 text-lg font-bold shadow-lg animate-scale-in">
+            <Badge className="mb-4 sm:mb-6 bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 sm:px-6 py-2 sm:py-3 text-base sm:text-lg font-bold shadow-lg animate-scale-in">
               🚨 LIMITED TIME — 86% OFF!
             </Badge>
-            <h2 className="text-5xl font-bold mb-12">Transform Your Career for Just $94</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 sm:mb-12 px-4">Transform Your Career for Just $94</h2>
             
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-10 mb-12 max-w-lg mx-auto border border-white/20 shadow-2xl animate-scale-in">
-              <p className="text-xl line-through text-gray-300 mb-4">Regular Price: $928</p>
-              <p className="text-6xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent mb-6">$94</p>
-              <p className="text-green-400 font-bold text-xl mb-8">Save $834 Today!</p>
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 sm:p-10 mb-8 sm:mb-12 max-w-lg mx-auto border border-white/20 shadow-2xl animate-scale-in">
+              <p className="text-lg sm:text-xl line-through text-gray-300 mb-4">Regular Price: $928</p>
+              <p className="text-5xl sm:text-6xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent mb-4 sm:mb-6">$94</p>
+              <p className="text-green-400 font-bold text-lg sm:text-xl mb-6 sm:mb-8">Save $834 Today!</p>
               
-              <ul className="text-left space-y-4 mb-8">
+              <ul className="text-left space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 {[
                   "One-time payment — no subscription",
                   "Lifetime access to all 5 courses", 
@@ -442,19 +443,19 @@ const Index = () => {
                   "7-day money-back guarantee"
                 ].map((feature, index) => (
                   <li key={index} className="flex items-center gap-3">
-                    <Check className="w-6 h-6 text-green-400" />
-                    <span className="text-lg">{feature}</span>
+                    <Check className="w-5 h-5 sm:w-6 sm:h-6 text-green-400" />
+                    <span className="text-base sm:text-lg">{feature}</span>
                   </li>
                 ))}
               </ul>
             </div>
             
-            <Button size="lg" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 animate-scale-in">
+            <Button size="lg" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 animate-scale-in w-full sm:w-auto">
               🚀 Claim Your 86% Discount Now
-              <ArrowRight className="ml-3 w-6 h-6" />
+              <ArrowRight className="ml-2 sm:ml-3 w-5 h-5 sm:w-6 sm:h-6" />
             </Button>
             
-            <p className="text-gray-300 mt-8 text-lg">
+            <p className="text-gray-300 mt-6 sm:mt-8 text-base sm:text-lg px-4">
               ⏰ Offer expires soon • 🔒 Secure checkout • ✅ Instant access
             </p>
           </div>
@@ -462,16 +463,16 @@ const Index = () => {
       </section>
 
       {/* FAQ Section - Now Collapsible */}
-      <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white relative">
+      <section className="py-20 sm:py-24 px-4 bg-gradient-to-br from-gray-50 to-white relative">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-16 animate-fade-in">
-            <Badge className="mb-6 bg-blue-100 text-blue-800 px-6 py-3 text-lg font-semibold rounded-full">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+            <Badge className="mb-4 sm:mb-6 bg-blue-100 text-blue-800 px-4 sm:px-6 py-2 sm:py-3 text-base sm:text-lg font-semibold rounded-full">
               Get Answers
             </Badge>
-            <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6 sm:mb-8 bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent px-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg sm:text-xl text-gray-600 px-4">
               Everything you need to know about our certification bundle
             </p>
           </div>
@@ -516,13 +517,13 @@ const Index = () => {
                 value={`item-${index}`} 
                 className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-0 overflow-hidden"
               >
-                <AccordionTrigger className="px-8 py-6 text-left hover:no-underline hover:bg-blue-50 transition-colors duration-300 group">
-                  <span className="text-xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">
+                <AccordionTrigger className="px-6 sm:px-8 py-4 sm:py-6 text-left hover:no-underline hover:bg-blue-50 transition-colors duration-300 group">
+                  <span className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">
                     {faq.q}
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6">
-                  <p className="text-lg text-gray-600 leading-relaxed">
+                <AccordionContent className="px-6 sm:px-8 pb-4 sm:pb-6">
+                  <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
                     {faq.a}
                   </p>
                 </AccordionContent>
@@ -530,11 +531,11 @@ const Index = () => {
             ))}
           </Accordion>
           
-          <div className="text-center mt-12 animate-fade-in">
-            <p className="text-lg text-gray-600 mb-6">
+          <div className="text-center mt-8 sm:mt-12 animate-fade-in">
+            <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6 px-4">
               Still have questions? We're here to help!
             </p>
-            <Button variant="outline" size="lg" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300">
+            <Button variant="outline" size="lg" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl transition-all duration-300 w-full sm:w-auto">
               Contact Support
             </Button>
           </div>
@@ -542,32 +543,32 @@ const Index = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-black text-white">
+      <section className="py-16 sm:py-20 px-4 bg-gradient-to-r from-gray-900 to-black text-white">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="animate-fade-in">
-            <h2 className="text-5xl font-bold mb-6">Ready to Advance Your Career?</h2>
-            <p className="text-2xl text-gray-300 mb-12 leading-relaxed">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 sm:mb-6 px-4">Ready to Advance Your Career?</h2>
+            <p className="text-xl sm:text-2xl text-gray-300 mb-8 sm:mb-12 leading-relaxed px-4">
               Join 3,786+ professionals who've transformed their careers with our training.
-              <br />
+              <br className="hidden sm:block" />
               <span className="text-orange-400 font-semibold">Don't let this 86% discount slip away.</span>
             </p>
             
-            <Button size="lg" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 mb-8 animate-scale-in">
+            <Button size="lg" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 mb-6 sm:mb-8 animate-scale-in w-full sm:w-auto">
               🎯 Start Learning Today — Just $94
-              <ArrowRight className="ml-3 w-6 h-6" />
+              <ArrowRight className="ml-2 sm:ml-3 w-5 h-5 sm:w-6 sm:h-6" />
             </Button>
             
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-8 text-lg">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-base sm:text-lg">
               <div className="flex items-center gap-2">
-                <Check className="w-6 h-6 text-green-400" />
+                <Check className="w-5 h-5 sm:w-6 sm:h-6 text-green-400" />
                 <span>7-day guarantee</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check className="w-6 h-6 text-green-400" />
+                <Check className="w-5 h-5 sm:w-6 sm:h-6 text-green-400" />
                 <span>Instant access</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check className="w-6 h-6 text-green-400" />
+                <Check className="w-5 h-5 sm:w-6 sm:h-6 text-green-400" />
                 <span>Lifetime updates</span>
               </div>
             </div>
