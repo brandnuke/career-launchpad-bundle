@@ -1,60 +1,80 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Clock, Users, FileText, BookOpen, Calendar, Trophy, Star, ArrowRight, Zap, Shield, Target } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Check, Clock, Users, FileText, BookOpen, Calendar, Trophy, Star, ArrowRight, Zap, Shield, Target, Play, ChevronRight } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background overflow-hidden">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20 px-4 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-24 px-4 overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full animate-pulse"></div>
           <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-indigo-400/10 to-pink-400/10 rounded-full animate-pulse delay-1000"></div>
         </div>
         
-        <div className="container mx-auto max-w-6xl text-center relative z-10">
+        <div className="container mx-auto max-w-7xl text-center relative z-10">
           <div className="animate-fade-in">
-            <Badge className="mb-6 bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600 px-4 py-2 text-sm font-semibold shadow-lg animate-scale-in">
-              🔥 86% OFF - ENDS SOON
+            <Badge className="mb-8 bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600 px-6 py-3 text-lg font-bold shadow-xl animate-scale-in rounded-full">
+              🔥 86% OFF - LIMITED TIME ONLY
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-8 leading-tight">
-              Master Project Management<br />
-              <span className="text-blue-600">Get 5 Top Courses for $94</span>
+            
+            <h1 className="text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-10 leading-tight tracking-tight">
+              Master Project Management
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-4xl mx-auto leading-relaxed">
+            
+            <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-8">
+              Get 5 Top Courses for Only $94
+            </div>
+            
+            <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-5xl mx-auto leading-relaxed font-medium">
               Transform your career with expert-led training for PMP®, PMI-SP®, PRINCE2®, CBAP®, PMI-RMP® exams. 
-              <span className="font-semibold text-blue-600"> Lifetime access • Risk-free • Career-boosting</span>
+              <br />
+              <span className="text-blue-600 font-bold">Lifetime access • Risk-free • Career-boosting</span>
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-              <Button size="lg" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-10 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 animate-scale-in">
-                🚀 Get Instant Access for $94
-                <ArrowRight className="ml-2 w-5 h-5" />
+            <div className="flex flex-col lg:flex-row gap-8 justify-center items-center mb-16">
+              <Button size="lg" className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-12 py-8 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 animate-scale-in rounded-2xl group">
+                <Play className="mr-3 w-6 h-6 group-hover:scale-110 transition-transform" />
+                Get Instant Access for $94
+                <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <div className="text-center animate-fade-in delay-300">
-                <p className="text-lg text-gray-500 line-through">Regular Price: $928</p>
-                <p className="text-2xl font-bold text-green-600">You Save: $834</p>
+              
+              <div className="text-center animate-fade-in delay-300 bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl">
+                <p className="text-xl text-gray-500 line-through mb-2">Regular Price: $928</p>
+                <p className="text-3xl font-bold text-green-600 mb-2">You Save: $834</p>
+                <p className="text-sm text-gray-600 font-medium">One-time payment • No subscription</p>
               </div>
             </div>
 
-            {/* Trust indicators */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8 animate-fade-in delay-500">
-              <div className="flex items-center gap-3 bg-white/70 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg">
-                <div className="flex text-yellow-400 text-lg">
+            {/* Enhanced trust indicators */}
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto animate-fade-in delay-500">
+              <div className="flex items-center justify-center gap-3 bg-white/90 backdrop-blur-md rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <div className="flex text-yellow-400 text-xl">
                   {'★'.repeat(5)}
                 </div>
-                <span className="text-lg font-semibold">4.8/5 Rating</span>
+                <div className="text-left">
+                  <div className="text-lg font-bold">4.8/5 Rating</div>
+                  <div className="text-sm text-gray-600">Based on 1,200+ reviews</div>
+                </div>
               </div>
-              <div className="flex items-center gap-3 bg-white/70 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg">
-                <Users className="w-6 h-6 text-blue-600" />
-                <span className="text-lg font-semibold">3,786+ Success Stories</span>
+              
+              <div className="flex items-center justify-center gap-3 bg-white/90 backdrop-blur-md rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <Users className="w-8 h-8 text-blue-600" />
+                <div className="text-left">
+                  <div className="text-lg font-bold">3,786+ Students</div>
+                  <div className="text-sm text-gray-600">Successfully certified</div>
+                </div>
               </div>
-              <div className="flex items-center gap-3 bg-white/70 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg">
-                <Shield className="w-6 h-6 text-green-600" />
-                <span className="text-lg font-semibold">7-Day Guarantee</span>
+              
+              <div className="flex items-center justify-center gap-3 bg-white/90 backdrop-blur-md rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <Shield className="w-8 h-8 text-green-600" />
+                <div className="text-left">
+                  <div className="text-lg font-bold">7-Day Guarantee</div>
+                  <div className="text-sm text-gray-600">100% money back</div>
+                </div>
               </div>
             </div>
           </div>
@@ -295,38 +315,101 @@ const Index = () => {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl font-bold mb-6">How It Works</h2>
-            <p className="text-xl text-gray-600">
-              Get started in minutes, not hours
+      {/* How It Works Section - Modernized */}
+      <section className="py-24 px-4 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50"></div>
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="text-center mb-20 animate-fade-in">
+            <Badge className="mb-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 text-lg font-semibold rounded-full shadow-lg">
+              Simple Process
+            </Badge>
+            <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent">
+              How It Works
+            </h2>
+            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+              Get started in minutes and become certified in months
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {[
-              { step: "1", title: "Enroll Instantly", description: "One-click enrollment with immediate access", icon: Zap },
-              { step: "2", title: "Access Everything", description: "Get lifetime access to all 5 premium courses", icon: BookOpen },
-              { step: "3", title: "Learn Flexibly", description: "Study on any device, anywhere, anytime", icon: Clock },
-              { step: "4", title: "Practice & Prepare", description: "Use 25+ practice tests to master concepts", icon: Target },
-              { step: "5", title: "Earn Certificates", description: "Get completion certificates for each course", icon: Trophy },
-              { step: "6", title: "Advance Career", description: "Apply skills and get promoted faster", icon: ArrowRight }
+              { 
+                step: "01", 
+                title: "Enroll Instantly", 
+                description: "One-click enrollment with immediate access to all 5 premium courses and materials", 
+                icon: Zap,
+                color: "from-blue-500 to-cyan-500"
+              },
+              { 
+                step: "02", 
+                title: "Learn Flexibly", 
+                description: "Study on any device, anywhere, anytime with our mobile-optimized platform", 
+                icon: BookOpen,
+                color: "from-green-500 to-emerald-500"
+              },
+              { 
+                step: "03", 
+                title: "Practice & Master", 
+                description: "Use 25+ practice tests and real-world scenarios to master every concept", 
+                icon: Target,
+                color: "from-purple-500 to-violet-500"
+              },
+              { 
+                step: "04", 
+                title: "Get Certified", 
+                description: "Earn completion certificates and prepare for official certification exams", 
+                icon: Trophy,
+                color: "from-orange-500 to-red-500"
+              },
+              { 
+                step: "05", 
+                title: "Advance Career", 
+                description: "Apply your new skills, get promoted faster, and increase your earning potential", 
+                icon: ArrowRight,
+                color: "from-pink-500 to-rose-500"
+              },
+              { 
+                step: "06", 
+                title: "Lifetime Support", 
+                description: "Get ongoing support, updates, and access to our community of professionals", 
+                icon: Shield,
+                color: "from-teal-500 to-blue-500"
+              }
             ].map((item, index) => (
-              <div key={index} className="text-center group animate-fade-in" style={{ animationDelay: `${index * 150}ms` }}>
-                <div className="relative mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl font-bold shadow-xl group-hover:scale-110 transition-transform duration-300">
-                    {item.step}
+              <Card key={index} className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 animate-fade-in bg-white border-0 shadow-xl" style={{ animationDelay: `${index * 150}ms` }}>
+                <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+                
+                <CardContent className="p-8 relative z-10">
+                  <div className="flex items-center justify-between mb-6">
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <item.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div className={`text-6xl font-black bg-gradient-to-br ${item.color} bg-clip-text text-transparent opacity-20 group-hover:opacity-40 transition-opacity duration-300`}>
+                      {item.step}
+                    </div>
                   </div>
-                  <div className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center">
-                    <item.icon className="w-6 h-6 text-white" />
+                  
+                  <h3 className="text-2xl font-bold mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-lg leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                    {item.description}
+                  </p>
+                  
+                  <div className="mt-6 flex items-center text-blue-600 font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    Learn more
+                    <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
-                </div>
-                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.description}</p>
-              </div>
+                </CardContent>
+              </Card>
             ))}
+          </div>
+          
+          <div className="text-center mt-16 animate-fade-in">
+            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 rounded-2xl">
+              Start Your Success Journey
+              <ArrowRight className="ml-3 w-6 h-6" />
+            </Button>
           </div>
         </div>
       </section>
@@ -378,11 +461,22 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 px-4 bg-white">
+      {/* FAQ Section - Now Collapsible */}
+      <section className="py-24 px-4 bg-gradient-to-br from-gray-50 to-white relative">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-16 animate-fade-in">Frequently Asked Questions</h2>
-          <div className="space-y-6">
+          <div className="text-center mb-16 animate-fade-in">
+            <Badge className="mb-6 bg-blue-100 text-blue-800 px-6 py-3 text-lg font-semibold rounded-full">
+              Get Answers
+            </Badge>
+            <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-gray-600">
+              Everything you need to know about our certification bundle
+            </p>
+          </div>
+          
+          <Accordion type="single" collapsible className="w-full space-y-4 animate-fade-in">
             {[
               {
                 q: "Are these official certifications?",
@@ -403,17 +497,46 @@ const Index = () => {
               {
                 q: "How long does it take to complete?",
                 a: "The total content is 130+ hours, but you can learn at your own pace. Most students complete everything within 3-6 months studying part-time."
+              },
+              {
+                q: "Do I need prior experience?",
+                a: "No prior certification experience is required! Our courses are designed for all levels, from beginners to experienced professionals looking to formalize their skills."
+              },
+              {
+                q: "Is there mobile access?",
+                a: "Absolutely! Our platform is fully optimized for mobile devices, tablets, and desktops. Learn anywhere, anytime on any device."
+              },
+              {
+                q: "What kind of support do you provide?",
+                a: "You get 24/7 access to our expert support team, community forums, and direct instructor support for any questions about the course material."
               }
             ].map((faq, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
-                <CardHeader>
-                  <CardTitle className="text-xl text-left">{faq.q}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 text-left leading-relaxed">{faq.a}</p>
-                </CardContent>
-              </Card>
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`} 
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-0 overflow-hidden"
+              >
+                <AccordionTrigger className="px-8 py-6 text-left hover:no-underline hover:bg-blue-50 transition-colors duration-300 group">
+                  <span className="text-xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">
+                    {faq.q}
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent className="px-8 pb-6">
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    {faq.a}
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
             ))}
+          </Accordion>
+          
+          <div className="text-center mt-12 animate-fade-in">
+            <p className="text-lg text-gray-600 mb-6">
+              Still have questions? We're here to help!
+            </p>
+            <Button variant="outline" size="lg" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300">
+              Contact Support
+            </Button>
           </div>
         </div>
       </section>
